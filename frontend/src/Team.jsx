@@ -4,7 +4,7 @@ import { Linkedin } from "lucide-react";
 
 // Import team member photos
 import sanidhyaImg from "../public/sani.jpeg";
-import atharvaImg from "../public/sani.jpeg";
+import atharvaImg from "../public/atharva.jpeg";
 import dhruvImg from "../public/dhruv.jpeg";
 import aradhayImg from "../public/aradhay.png";
 import adityaImg from "../public/aditya1.jpeg";
