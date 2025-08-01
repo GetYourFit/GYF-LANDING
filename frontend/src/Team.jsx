@@ -1,10 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
-// If you use lucide-react for icons:
 import { Linkedin } from "lucide-react";
 
-// Routing: Swap out for your app solution (e.g. Next/router, React Router, etc)
-
+// Import team member photos
+import sanidhyaImg from "../public/sani.jpeg";
+import atharvaImg from "../public/sani.jpeg";
+import dhruvImg from "../public/dhruv.jpeg";
+import aradhayImg from "../public/aradhay.png";
+import adityaImg from "../public/aditya1.jpeg";
+import ayushImg from "../public/sani.jpeg";
 
 const teamMembers = [
   {
@@ -13,7 +17,7 @@ const teamMembers = [
     bio: "Fashion-tech founder with a strategic vision...",
     specialties: ["Fashion Strategy", "Leadership", "Market Partnerships"],
     linkedin: "https://www.linkedin.com/in/sanidhya-nautiyal-2a0160287/",
-    color: "bg-purple-500 text-purple-100",
+    photo: sanidhyaImg,
   },
   {
     name: "Atharva",
@@ -21,7 +25,7 @@ const teamMembers = [
     bio: "Ex-Midjourney AI engineer...",
     specialties: ["AI Engineering", "Infra & Security", "Deep Learning"],
     linkedin: "https://www.linkedin.com/in/atharvmotghare/",
-    color: "bg-indigo-500 text-indigo-100",
+    photo: atharvaImg,
   },
   {
     name: "Dhruv",
@@ -29,7 +33,7 @@ const teamMembers = [
     bio: "Startup operator with a fashion background...",
     specialties: ["Business Ops", "Process Design", "Team Leadership"],
     linkedin: "https://www.linkedin.com/in/dhruv1104/",
-    color: "bg-pink-500 text-pink-100",
+    photo: dhruvImg,
   },
   {
     name: "Aradhay Jain",
@@ -37,15 +41,15 @@ const teamMembers = [
     bio: "Engineering lead with hands-on experience...",
     specialties: ["Full-Stack Eng.", "APIs", "Cloud Architecture"],
     linkedin: "https://www.linkedin.com/in/aradhayjain2006",
-    color: "bg-teal-500 text-teal-100",
+    photo: aradhayImg,
   },
   {
     name: "Aditya Bibhas Sahu",
     role: "ML Engineer",
     bio: "ML specialist. Designs and tunes deep learning models...",
     specialties: ["Machine Learning", "Personalization", "Model Deployment"],
-    linkedin: "https://www.linkedin.com/in/aditya-bibhas-sahu-632995280?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    color: "bg-cyan-500 text-cyan-100",
+    linkedin: "https://www.linkedin.com/in/aditya-bibhas-sahu-632995280",
+    photo: adityaImg,
   },
   {
     name: "Ayush Verma",
@@ -53,7 +57,7 @@ const teamMembers = [
     bio: "UI/UX designer & engineer building delightful interfaces...",
     specialties: ["UI/UX Design", "User Research", "Prototyping"],
     linkedin: "https://www.linkedin.com/in/ayush-verma-7334a8194/",
-    color: "bg-purple-500 text-purple-100",
+    photo: ayushImg,
   }
 ];
 
@@ -66,17 +70,7 @@ const fadeUp = {
   })
 };
 
-// Animation for the initial letter circle
-const letterAnimation = {
-  hidden: { opacity: 0, scale: 0.8 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: { duration: 0.6, ease: "easeOut" }
-  }
-};
-
-const TeamPage = ({setCurrentPage}) => (
+const TeamPage = ({ setCurrentPage }) => (
   <div className="min-h-screen pt-24 pb-16 bg-slate-50">
     <div className="container mx-auto px-6">
       {/* Header */}
@@ -95,61 +89,55 @@ const TeamPage = ({setCurrentPage}) => (
 
       {/* Team Cards */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-        {teamMembers.map((member, index) => {
-          const initial = member.name.charAt(0).toUpperCase();
-          return (
-            <motion.div
-              key={member.name}
-              className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fadeUp}
-              custom={index}
-            >
-              <div className="flex flex-col items-center mb-6">
-                {/* Animated initial circle */}
-                <motion.div
-                  className={`flex items-center justify-center w-24 h-24 rounded-full font-bold text-5xl shadow-md ${member.color} mb-4 select-none`}
-                  initial="hidden"
-                  animate="visible"
-                  variants={letterAnimation}
-                  aria-label={`${member.name} initial`}
-                >
-                  {initial}
-                </motion.div>
-
-                <h3 className="text-xl font-bold text-slate-800 mb-1">{member.name}</h3>
-                <p className="text-purple-600 font-medium mb-2">{member.role}</p>
-                <div className="flex gap-2 items-center mb-3">
-                  <a 
-                    href={member.linkedin} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-slate-400 hover:text-purple-600 transition"
-                    aria-label={`LinkedIn of ${member.name}`}
+        {teamMembers.map((member, index) => (
+          <motion.div
+            key={member.name}
+            className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            custom={index}
+          >
+            <div className="flex flex-col items-center mb-6">
+              <motion.img
+                src={member.photo}
+                alt={`${member.name} profile`}
+                className="w-24 h-24 rounded-full object-cover shadow-md mb-4"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+              />
+              <h3 className="text-xl font-bold text-slate-800 mb-1">{member.name}</h3>
+              <p className="text-purple-600 font-medium mb-2">{member.role}</p>
+              <a
+                href={member.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-400 hover:text-purple-600 transition mb-3"
+              >
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <p className="text-slate-600 text-sm leading-relaxed text-center">{member.bio}</p>
+            </div>
+            <div>
+              <h4 className="text-sm font-semibold text-slate-800 mb-2">Specialties:</h4>
+              <div className="flex flex-wrap gap-2 justify-center">
+                {member.specialties.map((spec, i) => (
+                  <span
+                    key={i}
+                    className="px-3 py-1 bg-purple-100 text-purple-700 text-xs rounded-full"
                   >
-                    <Linkedin className="w-5 h-5" />
-                  </a>
-                </div>
-                <p className="text-slate-600 text-sm leading-relaxed text-center">{member.bio}</p>
+                    {spec}
+                  </span>
+                ))}
               </div>
-              <div>
-                <h4 className="text-sm font-semibold text-slate-800 mb-2">Specialties:</h4>
-                <div className="flex flex-wrap gap-2 justify-center">
-                  {member.specialties.map((specialty, specIndex) => (
-                    <span key={specIndex} className="px-3 py-1 bg-purple-100 text-purple-700 text-xs rounded-full">
-                      {specialty}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
-          );
-        })}
+            </div>
+          </motion.div>
+        ))}
       </div>
 
-      {/* Animated CTA Section */}
+      {/* CTA Section */}
       <motion.div
         className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12 text-center text-white shadow-xl"
         initial={{ opacity: 0, scale: 0.97 }}

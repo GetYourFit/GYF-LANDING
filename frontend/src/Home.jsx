@@ -168,10 +168,9 @@ export default function HomePage({setCurrentPage}) {
       {/* Stats Section */}
       <section className="py-16 bg-white border-b border-slate-100">
         <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-8 text-center">
+          <div className="grid md:grid-cols-3 gap-8 text-center">
             {[
               { number: "98.6%", label: "Accuracy Rate", icon: <Target className="w-8 h-8 text-purple-600 mx-auto mb-3" /> },
-              { number: "120+", label: "B2B Partners", icon: <Users className="w-8 h-8 text-pink-600 mx-auto mb-3" /> },
               { number: "15M+", label: "Recommendations", icon: <TrendingUp className="w-8 h-8 text-indigo-600 mx-auto mb-3" /> },
               { number: "<150ms", label: "Response Time", icon: <Zap className="w-8 h-8 text-emerald-600 mx-auto mb-3" /> }
             ].map((stat, index) => (
