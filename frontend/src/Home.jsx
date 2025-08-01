@@ -116,7 +116,7 @@ export default function HomePage({setCurrentPage}) {
                 <div className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
               </motion.button>
               <motion.button
-                onClick={() => setCurrentPage('services')}
+                onClick={() => setCurrentPage('personal-styling')}
                 className="px-12 py-4 border-2 border-slate-300 text-slate-700 font-semibold rounded-full hover:border-purple-500 hover:text-purple-600 transition-all duration-300 hover:shadow-lg"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.97 }}
