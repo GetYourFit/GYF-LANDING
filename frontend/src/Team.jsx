@@ -8,7 +8,7 @@ import atharvaImg from "../public/sani.jpeg";
 import dhruvImg from "../public/dhruv.jpeg";
 import aradhayImg from "../public/aradhay.png";
 import adityaImg from "../public/aditya1.jpeg";
-import ayushImg from "../public/sani.jpeg";
+import ayushImg from "../public/ayush.jpeg";
 
 const teamMembers = [
   {
