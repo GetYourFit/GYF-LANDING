@@ -167,7 +167,7 @@ export default function HomePage({setCurrentPage}) {
           <div className="grid md:grid-cols-3 gap-8 text-center">
             {[
               { number: "98.6%", label: "Accuracy Rate", icon: <Target className="w-8 h-8 text-purple-600 mx-auto mb-3" /> },
-              { number: "15M+", label: "Recommendations", icon: <TrendingUp className="w-8 h-8 text-indigo-600 mx-auto mb-3" /> },
+              { number: "1.5K+", label: "Recommendations", icon: <TrendingUp className="w-8 h-8 text-indigo-600 mx-auto mb-3" /> },
               { number: "<150ms", label: "Response Time", icon: <Zap className="w-8 h-8 text-emerald-600 mx-auto mb-3" /> }
             ].map((stat, index) => (
               <motion.div
@@ -416,6 +416,48 @@ export default function HomePage({setCurrentPage}) {
           </div>
         </div>
       </section>
+      <section className="py-24 bg-slate-50">
+  <div className="container mx-auto px-6">
+    <div className="text-center mb-16">
+      <span className="inline-block px-4 py-2 bg-purple-100 text-purple-700 text-sm font-semibold rounded-full mb-4">
+        For Early Partners
+      </span>
+      <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-6">Our Promise to Fashion Innovators</h2>
+      <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+        As an early-stage startup, we’re working hand-in-hand with brands who believe in the future of AI-driven fashion. We’re not just building tools — we’re co-creating the future of personalized shopping.
+      </p>
+    </div>
+
+    <div className="grid md:grid-cols-3 gap-8">
+      {[
+        {
+          title: "Agile Integration",
+          description:
+            "We work closely with your team to provide smooth API onboarding, no matter your tech stack."
+        },
+        {
+          title: "Data You Own",
+          description:
+            "We believe in transparency — your customer insights stay yours. We simply help you act on them better."
+        },
+        {
+          title: "Iterate with Us",
+          description:
+            "As our partner, your feedback directly influences feature development and roadmap priorities."
+        }
+      ].map((promise, index) => (
+        <div
+          key={index}
+          className="bg-white rounded-xl p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+        >
+          <h3 className="text-xl font-semibold text-slate-800 mb-3">{promise.title}</h3>
+          <p className="text-slate-600 leading-relaxed">{promise.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-purple-600 via-purple-700 to-pink-700 relative overflow-hidden">
