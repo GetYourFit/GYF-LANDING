@@ -13,7 +13,7 @@ import ayushImg from "../public/ayush.jpeg";
 const teamMembers = [
   {
     name: "Sanidhya",
-    role: "CEO & Co-Founder",
+    role: "CEO",
     bio: "Fashion-tech founder with a strategic vision...",
     specialties: ["Fashion Strategy", "Leadership", "Market Partnerships"],
     linkedin: "https://www.linkedin.com/in/sanidhya-nautiyal-2a0160287/",
@@ -21,7 +21,7 @@ const teamMembers = [
   },
   {
     name: "Atharva",
-    role: "CTO & Co-Founder",
+    role: "CTO",
     bio: "Ex-Midjourney AI engineer...",
     specialties: ["AI Engineering", "Infra & Security", "Deep Learning"],
     linkedin: "https://www.linkedin.com/in/atharvmotghare/",
@@ -45,7 +45,7 @@ const teamMembers = [
   },
   {
     name: "Aditya Bibhas Sahu",
-    role: "ML Engineer",
+    role: "Lead ML Engineer",
     bio: "ML specialist. Designs and tunes deep learning models...",
     specialties: ["Machine Learning", "Personalization", "Model Deployment"],
     linkedin: "https://www.linkedin.com/in/aditya-bibhas-sahu-632995280",
