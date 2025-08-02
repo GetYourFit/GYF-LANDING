@@ -1,150 +1,45 @@
 import React from "react";
 
-
 const TermsPage = () => (
-    <div className="min-h-screen pt-24 pb-16 bg-slate-50">
-      <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-800 mb-4">Terms & Conditions</h1>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 mx-auto mb-4"></div>
-          <p className="text-sm sm:text-base text-slate-600">Last updated: August 1, 2025</p>
-        </div>
-  
-        {/* Terms Content */}
-        <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-6 md:p-8 text-left md:text-justify text-slate-700 space-y-6 leading-relaxed text-sm sm:text-base">
-          {[
-            {
-              title: "1. Agreement to Terms",
-              content: [
-                "Welcome to GYF (Get Your Fit), an AI-powered fashion personalization platform operated by GetYourFit Private Limited, a company incorporated under the laws of India.",
-                "These Terms and Conditions (\"Terms\") constitute a legally binding agreement between you (\"User\") and GetYourFit Private Limited regarding your use of the GYF platform and related services.",
-                "By accessing or using our Services, you acknowledge that you have read, understood, and agree to be bound by these Terms. If you do not agree, do not use the Services."
-              ]
-            },
-            {
-              title: "2. Acceptance and Modifications",
-              content: [
-                "2.1 Acceptance of Terms: Your use of our Services constitutes acceptance of these Terms. This agreement is effective from your first access or use.",
-                "2.2 Modifications: We may modify these Terms at our discretion. We’ll notify you via email, app notifications, or updates on our site. Continued use after changes implies acceptance."
-              ]
-            },
-            {
-              title: "3. Description of Services",
-              content: [
-                "GYF provides AI-powered fashion personalization including outfit recommendations, color matching, occasion-based styling, and analytics.",
-                "B2B offerings include API access, embedded tools, and business dashboards.",
-                "We aim for consistent uptime but do not guarantee uninterrupted service. Downtime may occur for maintenance, updates, or legal compliance."
-              ]
-            },
-            {
-              title: "4. User Accounts and Responsibilities",
-              content: [
-                "To access certain features, you must register with a valid email and password. Optionally, you may provide fashion preferences and measurements.",
-                "You’re responsible for safeguarding your credentials and ensuring all data you provide is accurate and up to date.",
-                "We reserve the right to suspend or terminate your account for policy violations or fraudulent behavior."
-              ]
-            },
-            {
-              title: "5. Prohibited Use & Content",
-              content: [
-                "You may not post illegal, harmful, infringing, or misleading content.",
-                "Do not attempt to access restricted systems, scrape data, or interfere with the experience of others.",
-                "We may remove any content or restrict access if these terms are violated."
-              ]
-            },
-            {
-              title: "6. Intellectual Property Rights",
-              content: [
-                "All intellectual property, including AI algorithms, branding, designs, and data architecture, belong to GetYourFit Private Limited.",
-                "You retain ownership of content you submit, but grant us a non-exclusive license to use it to improve services."
-              ]
-            },
-            {
-              title: "7. Privacy and Data Protection",
-              content: [
-                "Your privacy is governed by our Privacy Policy. By using our services, you consent to data collection and processing as described.",
-                "We use anonymized data to improve AI performance and provide insights."
-              ]
-            },
-            {
-              title: "8. Fees and Payment Terms",
-              content: [
-                "Basic services are free. Premium services may require a subscription.",
-                "Business users enter into custom agreements with tailored pricing and features.",
-                "All payments are processed by third parties. You're responsible for keeping billing info current."
-              ]
-            },
-            {
-              title: "9. Disclaimers",
-              content: [
-                "Services are provided \"as is\" without warranties. We do not guarantee satisfaction with fashion recommendations or product availability.",
-                "We are not liable for downtime, bugs, or service interruptions."
-              ]
-            },
-            {
-              title: "10. Limitation of Liability",
-              content: [
-                "We are not liable for indirect or consequential damages, lost profits, or data loss.",
-                "For paid services, our liability is limited to the amount paid in the last 12 months. For free users, liability is capped at ₹1,000."
-              ]
-            },
-            {
-              title: "11. Indemnification",
-              content: [
-                "You agree to indemnify and hold harmless GetYourFit and its affiliates against claims arising from your use of the Services or violations of these Terms."
-              ]
-            },
-            {
-              title: "12. Third-Party Services and Retailers",
-              content: [
-                "We may link to third-party tools or retailers. Your transactions with them are your responsibility.",
-                "We are not liable for their content, policies, or performance."
-              ]
-            },
-            {
-              title: "13. Dispute Resolution",
-              content: [
-                "These Terms are governed by Indian law. Disputes shall be resolved in the courts of [City], India.",
-                "Before legal action, we encourage amicable resolution by contacting our team."
-              ]
-            },
-            {
-              title: "14. General Provisions",
-              content: [
-                "These Terms represent the full agreement between you and us. If any part is found unenforceable, the rest remains valid.",
-                "We are not liable for delays due to force majeure events like natural disasters, wars, or technical failures."
-              ]
-            },
-            {
-              title: "15. Contact Information",
-              content: [
-                "Email: gyf1ltd@gmail.com",
-                "Subject: Terms and Conditions Inquiry",
-                "We typically respond within 7 business days."
-              ]
-            },
-            {
-              title: "16. Effective Date and Version",
-              content: [
-                "These Terms are effective as of August 1, 2025.",
-                "Version 1.0 | Document Status: Active"
-              ]
-            }
-          ].map((section, index) => (
-            <details key={index} className="group border-b border-slate-200 pb-4">
-              <summary className="cursor-pointer text-lg font-semibold text-slate-800 group-open:mb-2">
-                {section.title}
-              </summary>
-              {section.content.map((para, i) => (
-                <p key={i} className="mb-3">{para}</p>
-              ))}
-            </details>
-          ))}
-        </div>
+  <div className="min-h-screen pt-24 pb-16 bg-slate-50">
+    <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
+      {/* Header */}
+      <div className="text-center mb-12">
+        <h1 className="text-4xl md:text-5xl font-bold text-slate-800 mb-4">Terms & Conditions</h1>
+        <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 mx-auto mb-4"></div>
+        <p className="text-sm sm:text-base text-slate-600">Last updated: August 1, 2025</p>
+      </div>
+
+      {/* Terms Content */}
+      <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-6 md:p-8 text-left md:text-justify text-slate-700 space-y-6 leading-relaxed text-sm sm:text-base">
+        {["" +
+`1. Agreement to Terms\n\nWelcome to GYF (Get Your Fit), an AI-powered fashion personalization platform operated by GetYourFit Private Limited, a company incorporated under the laws of India (\"Company,\" \"we,\" \"us,\" or \"our\").\n\nThese Terms and Conditions (\"Terms\") constitute a legally binding agreement between you (\"User,\" \"you,\" or \"your\") and GetYourFit Private Limited regarding your use of the GYF platform, website, mobile applications, and related services (collectively, the \"Services\").\n\nBy accessing or using our Services, you acknowledge that you have read, understood, and agree to be bound by these Terms. If you do not agree to these Terms, you must not access or use our Services.`,
+`2. Acceptance and Modifications\n\n2.1 Acceptance of Terms\n\nYour use of our Services constitutes acceptance of these Terms. This agreement is effective as of the date you first access or use our Services.\n\n2.2 Modifications to Terms\n\nWe reserve the right to modify these Terms at any time at our sole discretion. We will provide notice of material changes through:\n- Email notifications to registered users\n- Prominent notices on our platform\n- Updated posting date on this document\n- In-app notifications when applicable\n\nContinued use of our Services after modifications take effect constitutes acceptance of the revised Terms. It is your responsibility to review these Terms periodically.`,
+`3. Description of Services\n\n3.1 Platform Overview\n\nGYF provides AI-powered fashion personalization services including:\n- Personalized outfit recommendations based on body type, skin tone, and preferences\n- Smart color matching and styling advice\n- Occasion-specific fashion suggestions\n- Integration with partner fashion retailers\n- Analytics and insights for fashion choices\n\n3.2 B2B Integration Services\n\nFor business partners, we provide:\n- API integration for e-commerce platforms\n- Embeddable widgets and tools\n- Analytics dashboards and reporting\n- Custom styling solutions\n- Technical support and maintenance\n\n3.3 Service Availability\n\nWe strive to maintain continuous service availability but do not guarantee uninterrupted access. We may temporarily suspend or limit Services for:\n- Scheduled maintenance and updates\n- Emergency repairs or security measures\n- Technical difficulties or system failures\n- Compliance with legal requirements`,
+`4. User Accounts and Registration\n\n4.1 Account Creation\n\nTo access certain features, you must create an account by providing:\n- Valid email address\n- Secure password meeting our requirements\n- Accurate personal information\n- Fashion preferences and measurements (optional)\n\n4.2 Account Responsibilities\n\nYou are responsible for:\n- Maintaining the confidentiality of your account credentials\n- All activities that occur under your account\n- Immediately notifying us of unauthorized access\n- Providing accurate and up-to-date information\n- Complying with these Terms and applicable laws\n\n4.3 Account Termination\n\nWe may suspend or terminate your account if you:\n- Violate these Terms or our policies\n- Provide false or misleading information\n- Engage in fraudulent or illegal activities\n- Interfere with the proper functioning of our Services\n- Fail to pay applicable fees (for premium services)\n\nYou may terminate your account at any time by contacting us at hello@getyourfit.tech.`,
+`5. User Conduct and Prohibited Activities\n\n5.1 Acceptable Use\n\nYou agree to use our Services only for lawful purposes and in accordance with these Terms. You will not:\n\nProhibited Content:\n- Upload, post, or transmit illegal, harmful, or offensive content\n- Share content that violates intellectual property rights\n- Distribute malware, viruses, or malicious code\n- Post spam, unsolicited advertisements, or promotional content\n\nProhibited Activities:\n- Attempt to gain unauthorized access to our systems\n- Reverse engineer, decompile, or disassemble our software\n- Use our Services to compete with or replicate our offerings\n- Interfere with other users' enjoyment of the Services\n- Harvest or collect user information without consent\n\n5.2 Content Standards\n\nAny content you submit must:\n- Be accurate and not misleading\n- Respect others' privacy and rights\n- Comply with applicable laws and regulations\n- Meet community standards and guidelines\n- Not infringe on intellectual property rights\n\n5.3 Enforcement\n\nWe reserve the right to:\n- Remove or modify content that violates these Terms\n- Suspend or terminate accounts for violations\n- Report illegal activities to appropriate authorities\n- Take legal action to protect our rights and interests`,
+`6. Intellectual Property Rights\n\n6.1 Our Intellectual Property\n\nThe Services and all related content, features, and functionality are owned by GetYourFit Private Limited and are protected by:\n- Copyright, trademark, and patent laws\n- International intellectual property treaties\n- Other applicable proprietary rights laws\n\nThis includes but is not limited to:\n- Software algorithms and AI models\n- User interface designs and layouts\n- Branding, logos, and trademarks\n- Documentation and educational content\n- Database structures and compilations\n\n6.2 User Content License\n\nBy submitting content to our Services, you grant us a:\n- Worldwide, non-exclusive, royalty-free license\n- Right to use, modify, reproduce, and distribute your content\n- Right to create derivative works for service improvement\n- License that survives termination of your account (for archived content)\n\nYou retain ownership of your original content, but you grant us these rights to provide and improve our Services.\n\n6.3 Respect for Third-Party Rights\n\nYou must respect the intellectual property rights of others. We will respond to valid copyright infringement notices in accordance with applicable laws, including the Digital Millennium Copyright Act (DMCA) where applicable.`,
+`7. Privacy and Data Protection\n\n7.1 Privacy Policy Integration\n\nYour privacy is important to us. Our collection, use, and protection of your personal information is governed by our Privacy Policy, which is incorporated into these Terms by reference.\n\n7.2 Data Usage Consent\n\nBy using our Services, you consent to:\n- Collection and processing of your personal information\n- Use of cookies and tracking technologies\n- Analysis of your usage patterns for service improvement\n- Sharing of anonymized data with partners as described in our Privacy Policy\n\n7.3 AI Training and Improvement\n\nYou acknowledge that your interactions with our Services may be used to:\n- Train and improve our AI algorithms\n- Develop new features and capabilities\n- Conduct research and development activities\n- Generate insights for fashion industry analysis`,
+`8. Fees and Payment Terms\n\n8.1 Free Services\n\nBasic GYF services are provided free of charge to individual users. We reserve the right to modify or limit free services with appropriate notice.\n\n8.2 Premium Services\n\nSome advanced features and services may require payment. Premium service terms include:\n- Subscription fees are billed in advance\n- Prices may change with 30 days' notice\n- Refunds are provided according to our refund policy\n- Automatic renewal unless cancelled\n\n8.3 B2B Services\n\nBusiness services are provided under separate commercial agreements that may include:\n- Custom pricing based on usage and features\n- Service level agreements and support terms\n- Implementation and integration fees\n- Minimum commitment periods\n\n8.4 Payment Processing\n\nPayments are processed by third-party providers. You agree to:\n- Provide accurate billing information\n- Authorize us to charge your selected payment method\n- Update payment information when necessary\n- Pay all applicable taxes and fees`,
+`9. Disclaimers and Limitations\n\n9.1 Service Disclaimers\n\nOur Services are provided \"as is\" and \"as available\" without warranties of any kind, either express or implied, including but not limited to:\n- Merchantability and fitness for a particular purpose\n- Non-infringement of third-party rights\n- Accuracy, completeness, or reliability of content\n- Uninterrupted or error-free operation\n\n9.2 Fashion Recommendations\n\nWhile we strive to provide accurate and helpful fashion recommendations, we disclaim responsibility for:\n- Individual satisfaction with recommended outfits\n- Accuracy of sizing or fit predictions\n- Availability or pricing of recommended products\n- Fashion trends or style preferences\n- Third-party retailer policies or practices\n\n9.3 Technical Limitations\n\nWe do not guarantee that our Services will:\n- Meet your specific requirements or expectations\n- Be available at all times or in all locations\n- Be free from errors, bugs, or technical issues\n- Be compatible with all devices or browsers\n- Provide real-time or up-to-date information`,
+`10. Limitation of Liability\n\n10.1 Damages Limitation\n\nTo the maximum extent permitted by law, GetYourFit Private Limited shall not be liable for any:\n- Indirect, incidental, special, or consequential damages\n- Loss of profits, revenue, data, or business opportunities\n- Damages resulting from third-party actions or content\n- Damages exceeding the amount paid for Services (if any)\n- Damages resulting from unauthorized access to your account\n\n10.2 Maximum Liability\n\nOur total liability to you for all claims arising from or related to these Terms or our Services shall not exceed:\n- For free services: INR 1,000 (One Thousand Indian Rupees)\n- For paid services: The amount paid by you for the Services in the 12 months preceding the claim\n\n10.3 Exceptions\n\nSome jurisdictions do not allow the exclusion or limitation of certain warranties or damages. In such jurisdictions, our liability will be limited to the maximum extent permitted by law.`,
+`11. Indemnification\n\nYou agree to indemnify, defend, and hold harmless GetYourFit Private Limited, its officers, directors, employees, agents, and affiliates from and against any and all claims, demands, losses, costs, and expenses (including reasonable attorneys' fees) arising from or related to:\n- Your use of the Services\n- Your violation of these Terms\n- Your violation of any rights of another party\n- Your violation of applicable laws or regulations\n- Content you submit or transmit through the Services`,
+`12. Third-Party Services and Content\n\n12.1 Third-Party Integrations\n\nOur Services may integrate with or contain links to third-party websites, applications, or services. We are not responsible for:\n- The availability or content of third-party services\n- Third-party privacy practices or terms of service\n- Transactions between you and third parties\n- The quality or accuracy of third-party content\n\n12.2 Partner Retailers\n\nWhen you interact with partner fashion retailers through our platform:\n- Separate terms and conditions may apply\n- We are not responsible for retailer policies or practices\n- Purchase transactions are between you and the retailer\n- Returns and exchanges are subject to retailer policies`,
+`13. Dispute Resolution\n\n13.1 Governing Law\n\nThese Terms are governed by and construed in accordance with the laws of India, without regard to conflict of law principles.\n\n13.2 Jurisdiction\n\nAny disputes arising from or relating to these Terms or our Services shall be subject to the exclusive jurisdiction of the courts located in [City], India.\n\n13.3 Arbitration (Optional)\n\nBefore filing any formal legal proceedings, we encourage you to contact us directly to seek a resolution. We are committed to working with you to resolve any concerns or disputes amicably.`,
+`14. General Provisions\n\n14.1 Entire Agreement\n\nThese Terms, together with our Privacy Policy and any additional terms for specific services, constitute the entire agreement between you and GetYourFit Private Limited regarding the Services.\n\n14.2 Severability\n\nIf any provision of these Terms is found to be invalid, illegal, or unenforceable, the remaining provisions will continue in full force and effect.\n\n14.3 Waiver\n\nOur failure to enforce any provision of these Terms does not constitute a waiver of that provision or any other provision.\n\n14.4 Assignment\n\nYou may not assign or transfer these Terms or your account without our prior written consent. We may assign these Terms and your account to any affiliate or successor entity.\n\n14.5 Force Majeure\n\nWe shall not be liable for any failure or delay in performance due to circumstances beyond our reasonable control, including but not limited to acts of God, natural disasters, war, terrorism, government actions, or technical failures.`,
+`15. Contact Information\n\nIf you have any questions about these Terms and Conditions, please contact us:\n\nGetYourFit Private Limited\nEmail: gyf1ltd@gmail.com\nSubject Line: Terms and Conditions Inquiry\n\nLegal Department:\nEmail: gyf1ltd@gmail.com\nSubject Line: Legal - Terms and Conditions\n\nWe will respond to your inquiry within 7 business days.`,
+`16. Effective Date and Updates\n\nThese Terms and Conditions are effective as of August 1, 2025, and will remain in effect until modified or terminated in accordance with the provisions herein.\n\nVersion History:\n- Version 1.0: August 1, 2025 - Initial publication\n\nLast Updated: August 1, 2025\nVersion: 1.0\nDocument Status: Active`
+        ].map((section, idx) => (
+          <details key={idx} className="group border-b border-slate-200 pb-4">
+            <summary className="cursor-pointer text-lg font-semibold text-slate-800 group-open:mb-2 whitespace-pre-line">
+              {section.split('\n')[0]}
+            </summary>
+            <p className="whitespace-pre-line">{section.split('\n').slice(1).join('\n')}</p>
+          </details>
+        ))}
       </div>
     </div>
-  );
-  
-  export default TermsPage;
-  
+  </div>
+);
+
+export default TermsPage;
