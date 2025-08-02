@@ -132,7 +132,7 @@ export default function HomePage({setCurrentPage}) {
               </motion.div>
               <motion.div className="flex items-center" whileHover={{ scale: 1.05 }}>
                 <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                15k+ Recommendations
+                1.5k+ Recommendations
               </motion.div>
             </div>
           </motion.div>
