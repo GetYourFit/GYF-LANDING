@@ -152,11 +152,12 @@ export default function HomePage({ setCurrentPage }) {
 
   useEffect(() => {
     if (inView) {
-      controlLeft.start({ x: 0, opacity: 1, transition: { type: "spring", stiffness: 70, delay: 0 } });
-      controlRight.start({ x: 0, opacity: 1, transition: { type: "spring", stiffness: 70, delay: 0.15 } });
+      controlLeft.start({ y: 0, opacity: 1, transition: { type: "spring", stiffness: 70, delay: 0 } });
+      controlRight.start({ y: 0, opacity: 1, transition: { type: "spring", stiffness: 70, delay: 0.15 } });
       controlCircle.start({ scale: 1, opacity: 1, transition: { type: "spring", stiffness: 80, delay: 0.3 } });
     }
   }, [inView, controlLeft, controlRight, controlCircle]);
+  
   const brandSliderRef = useRef(null);
   const [autoPlay, setAutoPlay] = useState(true);
 
@@ -315,56 +316,66 @@ export default function HomePage({ setCurrentPage }) {
 
 
       {/* Stats */}
-      <section ref={statsRef} className="py-16 bg-gradient-to-br from-[#f8fafc] via-[#e8edf3] to-[#f9fafe] border-b border-slate-100 relative overflow-visible">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-8 text-center">
-            <motion.div
-              initial={{ x: -80, opacity: 0 }} animate={controlLeft}
-              className="group bg-gradient-to-br from-[#fde5fc]/60 to-[#f6f6ff]/50 rounded-2xl shadow-md p-8"
-            >
-              <Target className="w-8 h-8 text-purple-600 mx-auto mb-3" />
-              <div className="text-3xl font-bold text-slate-800 mb-2">98.6%</div>
-              <div className="text-slate-600 font-medium">Accuracy Rate</div>
-            </motion.div>
-            <motion.div
-              initial={{ x: -80, opacity: 0 }} animate={controlLeft}
-              className="group bg-gradient-to-br from-[#fde5fc]/60 to-[#f6f6ff]/50 rounded-2xl shadow-md p-8"
-              transition={{ delay: 0.08 }}
-            >
-              <TrendingUp className="w-8 h-8 text-indigo-600 mx-auto mb-3" />
-              <div className="text-3xl font-bold text-slate-800 mb-2">1.5K+</div>
-              <div className="text-slate-600 font-medium">Recommendations</div>
-            </motion.div>
-            <motion.div
-              initial={{ x: 80, opacity: 0 }} animate={controlRight}
-              className="group bg-gradient-to-br from-[#fde5fc]/60 to-[#f6f6ff]/50 rounded-2xl shadow-md p-8"
-            >
-              <Zap className="w-8 h-8 text-emerald-600 mx-auto mb-3" />
-              <div className="text-3xl font-bold text-slate-800 mb-2">&lt;150ms</div>
-              <div className="text-slate-600 font-medium">Response Time</div>
-            </motion.div>
-            <motion.div
-              initial={{ x: 80, opacity: 0 }} animate={controlRight}
-              className="group bg-gradient-to-br from-[#fde5fc]/60 to-[#f6f6ff]/50 rounded-2xl shadow-md p-8"
-              transition={{ delay: 0.08 }}
-            >
-              <Users className="w-8 h-8 text-blue-600 mx-auto mb-3" />
-              <div className="text-3xl font-bold text-slate-800 mb-2">4,000+</div>
-              <div className="text-slate-600 font-medium">Happy Users</div>
-            </motion.div>
-          </div>
-          {/* Animated circle that appears on scroll */}
-          <motion.div
-            initial={{ scale: 0.2, opacity: 0 }}
-            animate={controlCircle}
-            className="flex items-center font-bold text-3xl justify-center text-black absolute left-1/2 top-full mt-[-80px] -translate-x-1/2 w-32 h-32 bg-gradient-to-br from-indigo-200 via-purple-200 to-white rounded-full shadow-lg z-0"
-            style={{ pointerEvents: 'none' }}
-          >
-            GYF
-          </motion.div>
-          
-        </div>
-      </section>
+      <section
+  ref={statsRef}
+  className="py-16 bg-gradient-to-br from-[#f8fafc] via-[#e8edf3] to-[#f9fafe] border-b border-slate-100 relative overflow-visible"
+>
+  <div className="container mx-auto px-6">
+    <div className="grid md:grid-cols-4 gap-8 text-center">
+      <motion.div
+        initial={{ y: -80, opacity: 0 }}
+        animate={controlLeft}
+        className="group bg-gradient-to-br from-[#fde5fc]/60 to-[#f6f6ff]/50 rounded-2xl shadow-md p-8"
+      >
+        <Target className="w-8 h-8 text-purple-600 mx-auto mb-3" />
+        <div className="text-3xl font-bold text-slate-800 mb-2">98.6%</div>
+        <div className="text-slate-600 font-medium">Accuracy Rate</div>
+      </motion.div>
+
+      <motion.div
+        initial={{ y: -80, opacity: 0 }}
+        animate={controlLeft}
+        transition={{ delay: 0.08 }}
+        className="group bg-gradient-to-br from-[#fde5fc]/60 to-[#f6f6ff]/50 rounded-2xl shadow-md p-8"
+      >
+        <TrendingUp className="w-8 h-8 text-indigo-600 mx-auto mb-3" />
+        <div className="text-3xl font-bold text-slate-800 mb-2">1.5K+</div>
+        <div className="text-slate-600 font-medium">Recommendations</div>
+      </motion.div>
+
+      <motion.div
+        initial={{ y: 80, opacity: 0 }}
+        animate={controlRight}
+        className="group bg-gradient-to-br from-[#fde5fc]/60 to-[#f6f6ff]/50 rounded-2xl shadow-md p-8"
+      >
+        <Zap className="w-8 h-8 text-emerald-600 mx-auto mb-3" />
+        <div className="text-3xl font-bold text-slate-800 mb-2">&lt;150ms</div>
+        <div className="text-slate-600 font-medium">Response Time</div>
+      </motion.div>
+
+      <motion.div
+        initial={{ y: 80, opacity: 0 }}
+        animate={controlRight}
+        transition={{ delay: 0.08 }}
+        className="group bg-gradient-to-br from-[#fde5fc]/60 to-[#f6f6ff]/50 rounded-2xl shadow-md p-8"
+      >
+        <Users className="w-8 h-8 text-blue-600 mx-auto mb-3" />
+        <div className="text-3xl font-bold text-slate-800 mb-2">4,000+</div>
+        <div className="text-slate-600 font-medium">Happy Users</div>
+      </motion.div>
+    </div>
+
+    <motion.div
+      initial={{ scale: 0.2, opacity: 0 }}
+      animate={controlCircle}
+      className="absolute left-1/2 top-full mt-[-80px] -translate-x-1/2 w-32 h-32 bg-gradient-to-br from-indigo-200 via-purple-200 to-white rounded-full shadow-lg flex items-center justify-center font-bold text-3xl text-black z-0"
+      style={{ pointerEvents: "none" }}
+    >
+      GYF
+    </motion.div>
+  </div>
+</section>
+
 
       {/* Features */}
       <section className="py-24 bg-gradient-to-br from-[#e3e6ef] via-[#f5f6fa] to-[#eef3f8]">
