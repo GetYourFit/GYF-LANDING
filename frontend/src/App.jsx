@@ -10,8 +10,8 @@ import PrivacyPage from './Privacy';
 const serviceDropdownPages = [
   { id: 'personal-styling', label: 'Personal Styling' },
   { id: 'style-challenges', label: 'Style Challenges' },
-  { id: 'outfit-planning', label: 'outfit planning' },
-  { id: 'virtual-consulting', label: 'virutal consulting' }
+  { id: 'Outfit-planning', label: 'Outfit planning' },
+  { id: 'Virtual-consulting', label: 'Virtual consulting' }
 ];
 
 const navItems = [
@@ -80,8 +80,8 @@ const App = () => {
       case 'Team': return <TeamPage setCurrentPage={setCurrentPage} />;
       case 'personal-styling': return <PersonalStylingPage />;
       case 'style-challenges': return <StyleChallengesPage />;
-      case 'outfit-planning': return <OutfitPlanningPage />;
-      case 'virtual-consulting': return <VirtualConsultingPage />;
+      case 'Outfit-planning': return <OutfitPlanningPage />;
+      case 'Virtual-consulting': return <VirtualConsultingPage />;
       default: return <HomePage />;
     }
   };

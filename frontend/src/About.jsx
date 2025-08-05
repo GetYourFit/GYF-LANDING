@@ -235,9 +235,9 @@ export default function AboutPage() {
             className="max-w-full"
           >
             {coreValues.map((v, i) => (
-              <div key={i} className="slider-box">
+              <div key={i} className="p-5">
                 <motion.div
-                  className="p-10 bg-white rounded-2xl shadow-lg text-center flex flex-col justify-center h-full"
+                  className="p-10 bg-white rounded-2xl shadow-lg text-center flex flex-col  justify-center h-full"
                   variants={fadeInUp}
                 >
                   {v.icon}
@@ -266,7 +266,7 @@ export default function AboutPage() {
             className="max-w-full"
           >
             {trustFeatures.map((item, i) => (
-              <div key={i} className="slider-box">
+              <div key={i} className="p-5">
                 <motion.div
                   className="flex flex-col items-center bg-white rounded-2xl shadow-lg p-8 h-full"
                   variants={fadeInUp}
