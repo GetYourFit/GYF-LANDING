@@ -69,7 +69,6 @@ const trustFeatures = [
   },
 ];
 
-// Slider settings with spacing & center mode for both sections
 const sliderSettingsCore = {
   dots: true,
   infinite: true,
@@ -78,10 +77,11 @@ const sliderSettingsCore = {
   slidesToScroll: 1,
   arrows: true,
   centerMode: true,
-  centerPadding: "80px",
+  centerPadding: "60px",
+  swipeToSlide: true,
   responsive: [
     { breakpoint: 1024, settings: { slidesToShow: 2, centerPadding: "40px" } },
-    { breakpoint: 640, settings: { slidesToShow: 1, centerPadding: "10vw" } }
+    { breakpoint: 768, settings: { slidesToShow: 1, centerPadding: "30px" } }, // Mobile optimized
   ],
 };
 
@@ -93,14 +93,14 @@ const sliderSettingsTrust = {
   slidesToScroll: 1,
   arrows: true,
   centerMode: true,
-  centerPadding: "60px",
+  centerPadding: "50px",
+  swipeToSlide: true,
   responsive: [
-    { breakpoint: 1024, settings: { slidesToShow: 1, centerPadding: "15vw" } }
+    { breakpoint: 1024, settings: { slidesToShow: 1, centerPadding: "20px" } },
   ],
 };
 
 export default function AboutPage() {
-  // Set up refs to both sliders for programmatic control
   const coreSlider = useRef(null);
   const trustSlider = useRef(null);
   const [coreAutoplay, setCoreAutoplay] = useState(true);
@@ -110,17 +110,14 @@ export default function AboutPage() {
     let ticking = false;
     let lastScroll = window.scrollY;
 
-    // Scroll handler that scrolls sliders in opposite directions:
     const onScroll = () => {
       if (!ticking) {
         window.requestAnimationFrame(() => {
           const scrollNow = window.scrollY;
           if (scrollNow > lastScroll) {
-            // Scrolling down: coreSlider next (left), trustSlider prev (right)
             coreSlider.current && coreSlider.current.slickNext();
             trustSlider.current && trustSlider.current.slickPrev();
           } else if (scrollNow < lastScroll) {
-            // Scrolling up: coreSlider prev (right), trustSlider next (left)
             coreSlider.current && coreSlider.current.slickPrev();
             trustSlider.current && trustSlider.current.slickNext();
           }
@@ -151,12 +148,14 @@ export default function AboutPage() {
       style={{
         background:
           "linear-gradient(120deg, #f9fafb 0%, #f0f2f6 40%, #e2e7ee 80%, #f9fafb 100%)",
+        overflowX: "hidden",
       }}
     >
-      <div className="container mx-auto px-3 sm:px-6">
+      <div className="container mx-auto px-3 sm:px-6 max-w-full">
+
         {/* Hero / Banner */}
         <motion.div
-          className="text-center mb-20"
+          className="text-center mb-20 px-4 md:px-0"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -172,7 +171,7 @@ export default function AboutPage() {
           <img
             src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=80"
             alt="Fashionable people smiling"
-            className="mt-10 rounded-2xl shadow-xl w-full max-h-[450px] object-cover border-2 border-amber-100"
+            className="mt-10 rounded-2xl shadow-xl w-full max-h-[500px] max-w-5xl object-cover border-2 border-amber-100 mx-auto"
           />
         </motion.div>
 
@@ -211,7 +210,6 @@ export default function AboutPage() {
                 { number: "900+", label: "Unique Outfits Curated" },
                 { number: "250+", label: "Repeat User Stories" },
                 { number: "100%", label: "Crowd-Loved AI Results" },
-                
               ].map((stat, idx) => (
                 <div key={idx} className="text-center">
                   <div className="text-3xl font-extrabold text-amber-600 mb-2">{stat.number}</div>
@@ -234,17 +232,19 @@ export default function AboutPage() {
             {...sliderSettingsCore}
             autoplay={coreAutoplay}
             ref={coreSlider}
+            className="max-w-full"
           >
             {coreValues.map((v, i) => (
-              <motion.div
-                key={i}
-                className="p-10 bg-white rounded-2xl shadow-lg text-center mx-6"
-                variants={fadeInUp}
-              >
-                {v.icon}
-                <h3 className="text-lg font-semibold mt-6 mb-3">{v.title}</h3>
-                <p className="text-slate-700">{v.desc}</p>
-              </motion.div>
+              <div key={i} className="slider-box">
+                <motion.div
+                  className="p-10 bg-white rounded-2xl shadow-lg text-center flex flex-col justify-center h-full"
+                  variants={fadeInUp}
+                >
+                  {v.icon}
+                  <h3 className="text-lg font-semibold mt-6 mb-3">{v.title}</h3>
+                  <p className="text-slate-700">{v.desc}</p>
+                </motion.div>
+              </div>
             ))}
           </Slider>
         </motion.div>
@@ -256,34 +256,38 @@ export default function AboutPage() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl font-bold text-center text-amber-700 mb-10">What Makes Us Different?</h2>
+          <h2 className="text-3xl font-bold text-center text-amber-700 mb-10">
+            What Makes Us Different?
+          </h2>
           <Slider
             {...sliderSettingsTrust}
             autoplay={trustAutoplay}
             ref={trustSlider}
+            className="max-w-full"
           >
             {trustFeatures.map((item, i) => (
-              <motion.div
-                key={i}
-                className="flex flex-col items-center bg-white rounded-2xl shadow-lg p-8 mx-8"
-                variants={fadeInUp}
-              >
-                {item.icon}
-                <img
-                  src={item.img}
-                  alt={item.title}
-                  className="rounded-lg w-full h-40 object-cover my-4 border-2 border-amber-100"
-                />
-                <h4 className="text-lg font-bold mb-2">{item.title}</h4>
-                <p className="text-slate-700 text-sm">{item.desc}</p>
-              </motion.div>
+              <div key={i} className="slider-box">
+                <motion.div
+                  className="flex flex-col items-center bg-white rounded-2xl shadow-lg p-8 h-full"
+                  variants={fadeInUp}
+                >
+                  {item.icon}
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    className="rounded-lg w-full h-40 object-cover my-4 border-2 border-amber-100"
+                  />
+                  <h4 className="text-lg font-bold mb-2">{item.title}</h4>
+                  <p className="text-slate-700 text-sm">{item.desc}</p>
+                </motion.div>
+              </div>
             ))}
           </Slider>
         </motion.div>
 
         {/* Sustainability Static / Animated Section */}
         <motion.div
-          className="bg-gradient-to-tr from-green-50 via-white to-amber-50 rounded-2xl p-12 shadow-lg max-w-6xl mx-auto"
+          className="bg-gradient-to-tr from-green-50 via-white to-amber-50 rounded-2xl p-12 shadow-lg max-w-6xl mx-auto px-4"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -293,7 +297,7 @@ export default function AboutPage() {
             <img
               src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80"
               alt="Sustainable fashion community"
-              className="w-full md:w-1/2 rounded-xl shadow-md object-cover border-2 border-emerald-100"
+              className="environment-image w-full md:w-1/2 rounded-xl shadow-md object-cover border-2 border-emerald-100"
             />
             <div>
               <h2 className="text-3xl font-bold mb-4 text-emerald-600 flex items-center gap-2">
