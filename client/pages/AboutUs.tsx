@@ -3,6 +3,15 @@ import Footer from '@/components/Footer';
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+import aradhayImg from "../public/aradhay.png";
+import adityaImg from "../public/aditya1.jpeg";
+import atharvaImg from "../public/atharva.jpeg";
+import ayushImg from "../public/ayush.jpeg";
+import dhruvImg from "../public/dhruv.jpeg";
+import saniImg from "../public/sani.jpeg";
+
+
+
 interface TeamMember {
   id: number;
   name: string;
@@ -18,7 +27,7 @@ export default function AboutUs() {
       id: 1,
       name: "Sanidhya",
       role: "CEO",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&h=300&fit=crop&crop=face",
+      image: saniImg,
       description: "Fashion-tech founder with a strategic vision.",
       skills: ["Fashion Strategy", "Leadership", "Market Research"]
     },
@@ -26,7 +35,7 @@ export default function AboutUs() {
       id: 2,
       name: "Atharva",
       role: "CTO",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face",
+      image: atharvaImg,
       description: "Ex-Midjourney AI engineer.",
       skills: ["AI Engineering", "Data & Security", "Deep Learning"]
     },
@@ -34,7 +43,7 @@ export default function AboutUs() {
       id: 3,
       name: "Dhruv",
       role: "COO",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face",
+      image: dhruvImg,
       description: "Startup operator with a fashion background.",
       skills: ["Operations", "Strategic Growth", "Team Leadership"]
     },
@@ -42,7 +51,7 @@ export default function AboutUs() {
       id: 4,
       name: "Aradhay Jain",
       role: "Lead Software Engineer",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&h=300&fit=crop&crop=face",
+      image: aradhayImg,
       description: "Engineering lead with hands-on experience.",
       skills: ["Full-Stack Engg", "APIs", "Cloud Architecture"]
     },
@@ -50,7 +59,7 @@ export default function AboutUs() {
       id: 5,
       name: "Aditya Bibhas Sahu",
       role: "Lead ML Engineer",
-      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=300&h=300&fit=crop&crop=face",
+      image: adityaImg,
       description: "ML specialist. Designs and tunes deep learning models.",
       skills: ["Machine Learning", "Personalization", "Model Development"]
     },
@@ -58,11 +67,13 @@ export default function AboutUs() {
       id: 6,
       name: "Ayush",
       role: "UI/UX Designer",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&fit=crop&crop=face",
+      image: ayushImg,
       description: "Visual storyteller crafting delightful experiences.",
       skills: ["UI/UX Design", "Visual Communication", "Prototyping"]
     }
   ];
+
+
 
   return (
     <div className="min-h-screen bg-white">
