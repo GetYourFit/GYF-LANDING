@@ -45,11 +45,11 @@ export default function HowItWorks() {
         </div>
 
         {/* Process Steps */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-y-12 gap-x-10 sm:gap-10 lg:gap-12 xl:gap-16 items-stretch">
           {steps.map((step, index) => (
             <div
               key={index}
-              className="bg-gradient-to-b from-coral-400 to-coral-200/20 p-6 rounded-lg text-center hover:shadow-lg transition-shadow duration-300"
+              className="bg-gradient-to-b from-coral-400 to-coral-200/20 p-6 rounded-lg text-center hover:shadow-lg transition-shadow duration-300 h-full"
             >
               <div className="text-black mb-4 flex justify-center">
                 {step.icon}

@@ -41,40 +41,46 @@ export default function InteractiveDemo() {
 
           {/* Right Side - Fashion Images */}
           <div className="relative hidden lg:block">
-            <div className="absolute inset-0 bg-gradient-to-br from-coral-100 to-coral-50 rounded-3xl"></div>
-            
+            <div className="absolute inset-0 bg-gradient-to-br from-coral-100 to-coral-50 rounded-3xl z-0"></div>
+
             {/* Fashion Image 1 - Top Right */}
-            <div className="absolute top-0 right-0 w-48 h-64 transform rotate-6 hover:rotate-12 transition-transform duration-300">
-              <img
-                src="https://api.builder.io/api/v1/image/assets/TEMP/1af525cebb7d697ec32ff06ce842da7d7dd13fb0?width=550"
-                alt="Purple fashion suit"
-                className="w-full h-full object-cover rounded-2xl shadow-2xl"
-                style={{ boxShadow: '1px 1px 31.25px 19px rgba(197, 43, 0, 0.25)' }}
-              />
+            <div className="absolute top-8 right-12 w-56 h-72 rotate-3 hover:rotate-6 transition-transform duration-300 z-10 pointer-events-none">
+              <div className="bg-white/95 rounded-3xl p-3 shadow-xl ring-1 ring-black/5">
+                <img
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/1af525cebb7d697ec32ff06ce842da7d7dd13fb0?width=550"
+                  alt="Purple fashion suit"
+                  className="w-full h-full object-cover rounded-2xl"
+                  style={{ boxShadow: '1px 1px 31.25px 19px rgba(197, 43, 0, 0.25)' }}
+                />
+              </div>
             </div>
 
-            {/* Fashion Image 2 - Middle */}
-            <div className="absolute top-32 left-12 w-40 h-52 transform -rotate-3 hover:rotate-3 transition-transform duration-300">
-              <img
-                src="https://api.builder.io/api/v1/image/assets/TEMP/20ef208220fc9f448e1b28c6b49fc0bb1d5e7d13?width=424"
-                alt="Casual summer outfit"
-                className="w-full h-full object-cover rounded-2xl shadow-2xl"
-                style={{ boxShadow: '1px 1px 31.25px 19px rgba(197, 43, 0, 0.25)' }}
-              />
+            {/* Fashion Image 2 - Middle Left */}
+            <div className="absolute top-28 left-2 w-56 h-72 -rotate-8 hover:-rotate-4 transition-transform duration-300 z-30 pointer-events-none">
+              <div className="bg-white/95 rounded-3xl p-3 shadow-xl ring-1 ring-black/5">
+                <img
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/20ef208220fc9f448e1b28c6b49fc0bb1d5e7d13?width=424"
+                  alt="Casual summer outfit"
+                  className="w-full h-full object-cover rounded-2xl"
+                  style={{ boxShadow: '1px 1px 31.25px 19px rgba(197, 43, 0, 0.25)' }}
+                />
+              </div>
             </div>
 
             {/* Fashion Image 3 - Bottom Right */}
-            <div className="absolute bottom-4 right-8 w-44 h-56 transform rotate-12 hover:rotate-6 transition-transform duration-300">
-              <img
-                src="https://api.builder.io/api/v1/image/assets/TEMP/2560c67f4057be62e79a38084176994d6b41b15c?width=502"
-                alt="Red fashion outfit"
-                className="w-full h-full object-cover rounded-2xl shadow-2xl"
-                style={{ boxShadow: '1px 1px 31.7px 19px rgba(197, 43, 0, 0.25)' }}
-              />
+            <div className="absolute bottom-8 right-28 w-60 h-80 rotate-6 hover:rotate-3 transition-transform duration-300 z-20 pointer-events-none">
+              <div className="bg-white/95 rounded-3xl p-3 shadow-xl ring-1 ring-black/5">
+                <img
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/2560c67f4057be62e79a38084176994d6b41b15c?width=502"
+                  alt="Red fashion outfit"
+                  className="w-full h-full object-cover rounded-2xl"
+                  style={{ boxShadow: '1px 1px 31.7px 19px rgba(197, 43, 0, 0.25)' }}
+                />
+              </div>
             </div>
 
             {/* Background decoration */}
-            <div className="relative w-full h-96 rounded-3xl"></div>
+            <div className="relative w-full h-[36rem] rounded-3xl"></div>
           </div>
 
           {/* Mobile Fashion Images */}

@@ -19,9 +19,9 @@ export default function Hero() {
                 <button className="bg-black text-white px-8 py-4 rounded-2xl font-lora font-bold text-xl tracking-widest hover:bg-gray-800 transition-colors duration-200 shadow-lg">
                   Get API Access
                 </button>
-                <button className="bg-black text-white px-8 py-4 rounded-2xl font-lora font-bold text-xl tracking-widest hover:bg-gray-800 transition-colors duration-200 shadow-lg">
+                <a href="/services" className="bg-black text-white px-8 py-4 rounded-2xl font-lora font-bold text-xl tracking-widest hover:bg-gray-800 transition-colors duration-200 shadow-lg text-center">
                   Explore Services
-                </button>
+                </a>
               </div>
             </div>
           </div>

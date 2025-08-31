@@ -9,7 +9,7 @@ export default function Navigation() {
     { name: 'Home', href: '/', isRoute: true },
     { name: 'About Us', href: '/about', isRoute: true },
     { name: 'Contact', href: '/contact', isRoute: true },
-    { name: 'Service', href: '#service', isRoute: false },
+    { name: 'Services', href: '/services', isRoute: true },
   ];
 
   return (

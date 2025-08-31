@@ -45,11 +45,11 @@ export default function WhyChooseGYF() {
         </div>
 
         {/* Feature Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-10 sm:gap-10 lg:gap-12 xl:gap-16 items-stretch">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-gradient-to-b from-coral-400 to-coral-200/20 p-8 rounded-lg hover:shadow-lg transition-shadow duration-300"
+              className="bg-gradient-to-b from-coral-400 to-coral-200/20 p-8 rounded-lg hover:shadow-lg transition-shadow duration-300 h-full"
             >
               <div className="text-black mb-6 flex justify-center">
                 {feature.icon}
