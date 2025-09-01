@@ -18,7 +18,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16 lg:h-20">
           {/* Logo */}
           <div className="flex items-center justify-center">
-            <img src={logo} alt="logo" className='w-24 h-24 mt-4'/>
+            <img src={logo} alt="logo" className='rounded-full w-14 h-14 mt-2'/>
             <Link to="/">
               <h1 className="text-3xl lg:text-4xl font-manrope font-bold text-black tracking-wider hover:text-coral-400 transition-colors duration-200">
                 GYF

@@ -1,4 +1,7 @@
+import {useNavigate} from 'react-router-dom';
+
 export default function Hero() {
+  const navigate = useNavigate();
   return (
     <section className="bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-24">
@@ -16,12 +19,12 @@ export default function Hero() {
               
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 pt-8">
-                <button className="bg-black text-white px-8 py-4 rounded-2xl font-lora font-bold text-xl tracking-widest hover:bg-gray-800 transition-colors duration-200 shadow-lg">
+                <button onClick={()=>navigate("/services")} className="bg-black text-white px-8 py-4 rounded-2xl font-lora font-bold text-xl tracking-widest hover:bg-gray-800 transition-colors duration-200 shadow-lg">
                   Get API Access
                 </button>
-                <a href="/services" className="bg-black text-white px-8 py-4 rounded-2xl font-lora font-bold text-xl tracking-widest hover:bg-gray-800 transition-colors duration-200 shadow-lg text-center">
+                <button onClick={()=>navigate("/services")} className="bg-black text-white px-8 py-4 rounded-2xl font-lora font-bold text-xl tracking-widest hover:bg-gray-800 transition-colors duration-200 shadow-lg text-center">
                   Explore Services
-                </a>
+                </button>
               </div>
             </div>
           </div>
